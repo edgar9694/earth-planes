@@ -67,7 +67,7 @@ scene.add(moonLight);
 let mousePos = new THREE.Vector2(0,0);
 
 
-(asyncFunction = async () => {
+const asyncFunction = (async () => {
     let pmrem = new THREE.PMREMGenerator(renderer);
     let envmapTexture = await new RGBELoader().setDataType(THREE.FloatType).loadAsync("assets/old_room_2k.hdr");
     let envMap = pmrem.fromEquirectangular(envmapTexture).texture;
