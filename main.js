@@ -69,7 +69,7 @@ let mousePos = new THREE.Vector2(0,0);
 
 const asyncFunction = (async () => {
     let pmrem = new THREE.PMREMGenerator(renderer);
-    let envmapTexture = await new RGBELoader().setDataType(THREE.FloatType).loadAsync("assets/old_room_2k.hdr");
+    let envmapTexture = await new RGBELoader().setDataType(THREE.FloatType).loadAsync("assets/room.hdr");
     let envMap = pmrem.fromEquirectangular(envmapTexture).texture;
 
     const ring1Geo = new THREE.RingGeometry(15, 13.5, 80, 1, 0);
